@@ -37,3 +37,8 @@ class User:
         Returns :
             Credential of person that matches the name.
         '''
+         for user in cls.user_list:
+            if user.user_name == name:
+                return True
+            #cls does not allows the entire class to pass when the method is called
+            return False
