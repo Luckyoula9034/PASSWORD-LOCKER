@@ -29,3 +29,11 @@ def find_user(name):
     Function that finds a user by name and returns the details
     '''
     return User.find_by_name(name)
+
+
+def check_existing_users(name):
+    '''
+    Function that check if a user exists with that name and return a Boolean
+    '''
+    return User.user_exist(name)
+
