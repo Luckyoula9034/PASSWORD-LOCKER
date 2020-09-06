@@ -89,3 +89,12 @@ def test_user_exists(self):
         user_exists = User.user_exist("0759099034")
 
         self.assertTrue(user_exists)
+
+
+def test_display_all_users(self):
+        '''
+        method that returns a list of all contacts saved
+        '''
+
+        self.assertEqual(User.display_user(),
+                        User.user_list)
