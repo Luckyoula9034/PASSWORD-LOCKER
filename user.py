@@ -17,4 +17,12 @@ class User:
         save_credential method saves credential objects into credential_list
 
         '''
+        User.user_list.append(self)
         
+    def delete_user(self):   
+        
+        '''
+        delete_contact method deletes a saved contact from the contact_list
+        '''
+
+        User.user_list.remove(self) 
