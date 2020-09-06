@@ -93,8 +93,12 @@ def test_user_exists(self):
 
 def test_display_all_users(self):
         '''
-        method that returns a list of all contacts saved
+        method that returns a list of all credential saved
         '''
 
         self.assertEqual(User.display_user(),
                         User.user_list)
+
+        
+if __name__ == '__main__':
+    unittest.main()
