@@ -73,7 +73,7 @@ def test_find_user_by_name(self):
 
         found_user = User.find_by_name("lucky")
 
-        self.assertEqual(found_user.email, test_user.email)
+        self.assertEqual(found_user.name, test_user.email)
 
 
 def test_user_exists(self):

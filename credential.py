@@ -1,4 +1,6 @@
+import pyperclip
 class Credential:
+
     """
     Class that generates new instances of users.
     """
