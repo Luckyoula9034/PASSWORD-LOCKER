@@ -50,7 +50,7 @@ def main():
     print("Hello Welcome to your account. What is your name?")
     user_name = input()
 
-    print(f"Hello.{user_name} what would you like to do?")
+    print(f"Hello.{user_name} please follow the procedures to carefully to create account?")
     print('\n')
 
     while True:
