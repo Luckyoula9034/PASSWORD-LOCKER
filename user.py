@@ -22,7 +22,18 @@ class User:
     def delete_user(self):   
         
         '''
-        delete_contact method deletes a saved contact from the contact_list
+        delete_credential method deletes a saved credential from the credential_list
         '''
 
         User.user_list.remove(self) 
+
+    @classmethod
+    def find_by_name(cls, name):
+         '''
+        Method that takes in a name and returns a credential that matches that name.
+
+        Args:
+            name: user name to search for
+        Returns :
+            Credential of person that matches the name.
+        '''
