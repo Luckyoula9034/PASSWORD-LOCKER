@@ -42,3 +42,18 @@ class User:
                 return True
             #cls does not allows the entire class to pass when the method is called
             return False
+    
+    @classmethod
+    def user_exist(cls, name):
+        '''
+          Method that checks if a credential exists from the credential list.
+        Args:
+              name: user name to search if it exists
+        Returns :
+              Boolean: True or false depending if the credential exists
+        '''
+        for user in cls.user_list:
+            if user.password == name:
+                return True
+
+            return False        
