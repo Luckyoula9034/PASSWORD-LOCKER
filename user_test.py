@@ -27,9 +27,15 @@ def test_init(self):
     self.assertEqual(self.new_user.password, "0759099034")
     self.assertEqual(self.new_user.email, "luckyoula@gmail.com")
 def test_save_user(self):
-        '''
-        test_save_user test case to test if the credential object is saved into
-         the user list
-        '''
-        self.new_user.save_user()  # saving the new user
-        self.assertEqual(len(User.user_list), 1)
+    '''
+    test_save_user test case to test if the credential object is saved into
+     the user list
+    '''
+    self.new_user.save_user()  # saving the new user
+    self.assertEqual(len(User.user_list), 1)
+def tearDown(self):
+    
+    '''
+    tearDown method that does clean up after each test case has run.
+    '''
+    User.user_list = []
