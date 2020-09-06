@@ -2,13 +2,14 @@
 from user import User
 from credential import Credential
 
+
 def create_user(f_name, l_name, password, email):
     '''
     Function to create a new user
     '''
     new_user = User(f_name, l_name, password, email)
     return new_user
-    
+
 
 def save_users(user):
     '''
@@ -46,10 +47,10 @@ def display_user():
 
 
 def main():
-    print("Hello Welcome to password-locker. What is your name?")
+    print("Hello Welcome to your account. What is your name?")
     user_name = input()
 
-    print(f"Hello.{user_name} please follow the procedures carefully to create account?")
+    print(f"Hello.{user_name} what would you like to do?")
     print('\n')
 
     while True:
@@ -85,3 +86,40 @@ def main():
             print(
                 f"You can now login to your {f_name} account using your password.")
             print('\n')
+            
+        elif short_code == 'dc':
+
+            if display_user():
+                print("Here is a list of all your details")
+                print('\n')
+
+                for user in display_user():
+                    print(
+                        f"{user.account_name} {user.user_name} .....{user.password}")
+
+                print('\n')
+            else:
+                print('\n')
+                print("You dont seem to have any details saved yet")
+                print('\n')
+
+        elif short_code == 'fc':
+
+            print("Enter the password to log in")
+
+            search_user = input()
+            if check_existing_users(search_user):
+                search_user = find_user(search_user)
+                print(f"search_user{f_name} {l_name}")
+                print('-' * 20)
+
+                print(f"search_user.......{password}")
+                print(f"search_user.......{email}")
+            else:
+                print("That user does not exist")
+
+        elif short_code == "ex":
+            print("Bye .......")
+            break
+        else:
+            print("I really didn't get that. Please use the short codes")
