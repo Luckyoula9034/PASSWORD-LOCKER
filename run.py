@@ -15,3 +15,10 @@ def save_users(user):
     Function to save user detail
     '''
     user.save_user()
+
+
+def del_user(user):
+    '''
+    Function to delete a user detail
+    '''
+    user.delete_user()
