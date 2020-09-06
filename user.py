@@ -5,9 +5,16 @@ class User:
     user_list = [] #empty credential list
 
     def __init__(self, account_name, user_name, password, email):
-
+        # instace variables are viriables that are unique to each new instance of the class
        
         self.account_name = account_name
         self.user_name = user_name
         self.password = password
         self.email = email 
+
+    def  save_user(self):
+        '''
+        save_credential method saves credential objects into credential_list
+
+        '''
+        
