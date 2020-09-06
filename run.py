@@ -37,3 +37,10 @@ def check_existing_users(name):
     '''
     return User.user_exist(name)
 
+
+def display_user():
+    '''
+    Function that returns all the saved details
+    '''
+    return User.display_user()
+
