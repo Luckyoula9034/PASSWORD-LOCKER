@@ -44,3 +44,10 @@ def display_user():
     '''
     return User.display_user()
 
+
+def main():
+    print("Hello Welcome to password-locker. What is your name?")
+    user_name = input()
+
+    print(f"Hello.{user_name} please follow the procedures carefully to create account?")
+    print('\n')
