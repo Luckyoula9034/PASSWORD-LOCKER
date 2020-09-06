@@ -11,6 +11,8 @@ class TestUser(unittest.TestCase):
     '''
 
 def setUp(self):
-        '''
-        Set up method to run before each test cases.
-        '''
+    '''
+    Set up method to run before each test cases.
+    '''
+    self.new_user = User(
+            "lucky", "oula", "0759099034", "luckyoula@gmail.com")  # create credential object
